@@ -1,0 +1,15 @@
+title This is a title
+participant User
+participant System Application
+participant Input Sketch
+participant ImageDatabase
+participant TrainedNeuralNetwork
+
+
+User->System Application:User Interaction Interface
+System Application->Input Sketch:Input The Sketch Image \n
+Input Sketch->ImageDatabase:Feature Extracted\n
+Input Sketch->TrainedNeuralNetwork:Extracted Feature \n
+System Application<-TrainedNeuralNetwork:Predicted Feature \n
+System Application<-ImageDatabase:Extracted Feature \n\n
+User<-System Application:Compared Features And Indentified Person From Sketch to Image in Database
